@@ -1,0 +1,126 @@
+% --------
+% Packages
+% --------
+
+\usepackage[
+	english,
+	strings
+]{babel}						% Languages
+
+% ===      ===
+% === Math ===
+% ===      ===
+
+\usepackage{amsmath,amssymb}    % more math symbols
+\usepackage{mathtools}          % more math symbols
+\usepackage{dsfont}             % double stroked math symbols
+\usepackage{amsfonts}           % blackboard math symbols
+\usepackage{latexsym}		    % more math symbols
+\usepackage{chngcntr}		    % more math symbols
+\usepackage{mathrsfs}		    % math-fonts
+\usepackage{cancel}             % cancel lines for fractions
+\usepackage[luatex]{nchairx}    % additional packages
+\usepackage{exscale}            % large summation signs in 11pt
+\usepackage{leftindex}          % for indeces to the left of symbols
+\usepackage{mleftright}         % better spacing for left and right
+
+% ===          ===
+% === Graphics ===
+% ===          ===
+
+\usepackage{graphicx}           % Include images
+\usepackage{tikz}               % for commutative diagrams and stuff
+\usetikzlibrary{patterns}
+\usetikzlibrary{cd}
+\usepackage[backend=biber,backref=true]{biblatex}
+
+% ===         ===
+% === Figures ===
+% ===         ===
+
+\usepackage{floatrow}           % Centered Figures etc.
+\usepackage{subfig}             % Separate captioning of multiple figures in one environment
+\usepackage[margin    =20pt,
+            font      ={footnotesize},
+            format    =plain,
+            labelsep  =period
+]{caption}          % Nicer looking captions
+
+% ===                 ===
+% === Fonts & Symbols ===
+% ===                 ===
+
+% Font related packages
+\usepackage[T1]{fontenc}   % Allows usage of custom fonts and improves encoding
+% \usepackage[sc,osf]{mathpazo}   % Custom palatino font with smallcaps and old style figures
+% \usepackage[scaled=.8]{beramono}% Custom monospace font
+\usepackage{fontspec}             % Allows using custom fonts
+\usepackage[
+	% Turn of certain warnings when using mathtools with unicode-math
+	warnings-off={mathtools-colon,mathtools-overbracket},
+	% Inform unicode-math we are using an upright math font (euler math)
+	math-style=upright
+]{unicode-math}                   % Allows input and output of math as unicode characters.
+% Font customization
+\defaultfontfeatures{Ligatures={TeX}}
+\setmainfont{Rosario}
+\setmainfont{TeX Gyre Termes}
+\setmathfont{Euler Math}[Scale=MatchLowercase]
+\setmonofont{JetBrains Mono}[Scale=MatchLowercase]
+% Color
+\usepackage[dvipsnames]{xcolor} % Colors
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{linkblue}{RGB}{58, 103, 181}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{foldercolor}{RGB}{124,166,198}
+% Symbols
+\usepackage{csquotes}           % Prettier quote signs
+\usepackage{ellipsis}           % Fixes spacing of ellipsis
+\usepackage{fontspec}           % German special characters with luatex. Needs to be after mathpazo.
+\usepackage[
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=linkblue,
+	final=true,                 % always treat as final
+	pdfpagelabels,              % use pdf page labels
+]{hyperref}                     % hyperrefs are cool!
+\usepackage[
+	nameinlink
+]{cleveref}                     % Nicer automatic references
+\usepackage{xurl}               % Better link inclusions
+
+% ===                        ===
+% === Technical & Formatting ===
+% ===                        ===
+
+\usepackage[footsepline, draft=false]{scrlayer-scrpage}
+\usepackage[babel]{microtype}   % Nicer text blocks
+\DeclareMicrotypeAlias{Euler Math}{TU-basic} % With unicode math, math is rendered in TU font encoding, where Euler math does not support some of the symbols.
+\usepackage{xspace}             % better spacing after macros
+\usepackage{marginnote}         % Used to put text into the margins.
+\usepackage{gitinfo2}           % show info about the git
+\usepackage{ifdraft}            % to determine whether draft mode
+\usepackage{titling}            % allows use of thetitle
+\usepackage[cleanlook]{isodate} % Prettier date
+\usepackage{array,booktabs}     % Improved table formatting options
+\newcolumntype{L}[1]{>{\raggedright}p{#1}}
+\usepackage{enumitem}           % Better formatting for enumerations
+\setlist{nosep}
+\setlist[enumerate,1]{label=(\roman*)}
+\setlist[enumerate,2]{label=(\alph*)}
+\usepackage{silence}           % Disable certain warnings
+\WarningFilter{latex}{Unused label}
+\WarningFilter{latex}{Unused entry}
+\WarningFilter{latex}{Marginpar on page}
+\WarningFilter{hypdoc}{hyperref}
+
+% ===                ===
+% === Other Packages ===
+% ===                ===
+
+\usepackage{blindtext}          % Simple blindtext for typography testing
+\usepackage{fixme}
+\FXRegisterAuthor{lm}{alm}{Linus}
+\fxsetup{theme=colorsig}
