@@ -31,6 +31,32 @@ The adventurous quest for forbidden knowledge about the properties of the cake s
 \section{Preliminaries}
 What is the space of cakes, anyway? Is it a topological space? Which topology should we consider?
 
+When baking a cake, we may consider the ingredients given by the recipe as a vector of real numbers.
+When extending each recipe by the ingredients it doesn't contain, this places all cake recipes in a common vector space of some (currently unknown) dimension $r$.
+This allows us to apply the methods of linear algebra to cakes.
+In the large vector space of possible recipes, not all vectors must correspond to a mixture that can be turned into a tasty cake by an appropriate sequence of instructions.
+We call the subset $\cakespace \subseteq \field{R}_+^r$ of recipes that do \emph{cake space}.
+The cake space is not necessarily a space, yet it is closed under positive scalar multiplication.
+
+\section{Operations}
+Baking a recipe for a larger or smaller number of people than originally intended naturally leads to (positive) scalar multiplication.
+When baking a cake for consumption by a celiac, it may be wise to first apply the operation given by the matrix
+\begin{equation*}
+	\begin{pmatrix}
+		0 & 1 \\ 1 & 0
+	\end{pmatrix}
+\end{equation*}
+to the subspace spanned by $\{\text{four}, \text{gluten-free flour}\}$.
+However, the addition of cake recipes is a yet underexplored topic. 
+Clearly, a baker may choose to add or remove a quantity of a certain loved or disdained ingredient $i$ (such as sugar or raisins) to a recipe, corresponding to the operation
+\begin{equation*}
+	r' = r + \lambda e_{i} \qquad \lambda \geq - r_i\text{.}
+\end{equation*}
+This may not result in a tasty cake for all $\lambda$ or $i$.
+Similarly, one may wonder if the addition of two valid cakes $r,s \in \cakespace$ is necessarily contained in cake space again.
+This leads us to the question of convexity.
+
+
 \section{Convexity}
 Is the space of cakes convex? To motivate ourselves for this study, we started with a simple (but tasty) experiment.
 
